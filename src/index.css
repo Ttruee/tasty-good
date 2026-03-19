@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-950 text-content-primary font-sans antialiased;
+  }
+
+  * {
+    @apply border-surface-600;
+  }
+}
+
+@layer components {
+  /* 카드 기본 스타일 */
+  .card {
+    @apply bg-surface-900 rounded-card shadow-card border border-surface-600;
+  }
+
+  /* 기본 버튼 */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-medium
+           rounded-btn px-4 py-2 transition-colors duration-150 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-surface-700 text-content-secondary
+           rounded-btn px-4 py-2 transition-colors duration-150 cursor-pointer;
+  }
+
+  /* 입력 필드 */
+  .input-base {
+    @apply bg-surface-800 border border-surface-600 rounded-btn
+           text-content-primary placeholder-content-muted
+           px-4 py-2.5 w-full outline-none
+           focus:border-primary-500 focus:ring-1 focus:ring-primary-500
+           transition-colors duration-150;
+  }
+}
+
+/* 스크롤바 커스텀 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
