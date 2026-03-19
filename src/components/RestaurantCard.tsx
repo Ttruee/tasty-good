@@ -2,6 +2,7 @@ import type { Restaurant } from '@/types/restaurant'
 
 interface RestaurantCardProps {
   restaurant: Restaurant
+  onEdit: (restaurant: Restaurant) => void
 }
 
 const STATUS_CONFIG = {
@@ -35,7 +36,7 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
-export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
+export default function RestaurantCard({ restaurant, onEdit }: RestaurantCardProps) {
   const { name, category, address, status, rating, visitDate, review } = restaurant
   const cfg = STATUS_CONFIG[status]
 
@@ -48,9 +49,19 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
             {category}
           </span>
         </div>
-        <span className={`text-xs px-2 py-1 rounded-full border font-medium shrink-0 ${cfg.badge}`}>
-          {cfg.label}
-        </span>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className={`text-xs px-2 py-1 rounded-full border font-medium ${cfg.badge}`}>
+            {cfg.label}
+          </span>
+          <button
+            type="button"
+            onClick={() => onEdit(restaurant)}
+            className="text-content-muted hover:text-content-primary transition-colors text-sm cursor-pointer leading-none"
+            title="수정"
+          >
+            ✏️
+          </button>
+        </div>
       </div>
 
       <p className="text-sm text-content-muted mb-2 flex items-center gap-1">
