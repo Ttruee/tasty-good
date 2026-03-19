@@ -1,7 +1,8 @@
+import { useShallow } from 'zustand/react/shallow'
 import { useRestaurantStore } from '@/store/restaurantStore'
 
 export default function StatsCards() {
-  const stats = useRestaurantStore((s) => s.stats())
+  const stats = useRestaurantStore(useShallow((s) => s.stats()))
 
   const cards = [
     {

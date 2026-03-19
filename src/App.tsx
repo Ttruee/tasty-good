@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useShallow } from 'zustand/react/shallow'
 import { useRestaurantStore } from '@/store/restaurantStore'
 import type { Restaurant } from '@/types/restaurant'
 import Header from '@/components/Header'
@@ -31,7 +32,7 @@ function EmptyState({ hasData, onAddClick }: { hasData: boolean; onAddClick: () 
 }
 
 function App() {
-  const filteredRestaurants = useRestaurantStore((s) => s.filteredRestaurants())
+  const filteredRestaurants = useRestaurantStore(useShallow((s) => s.filteredRestaurants()))
   const totalCount          = useRestaurantStore((s) => s.restaurants.length)
 
   const [modalOpen, setModalOpen]   = useState(false)
