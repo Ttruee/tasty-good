@@ -46,19 +46,18 @@ interface Restaurant {
 
 ## 디자인 토큰
 ```
-primary-500  #D85A30   코럴 (버튼, 활성 탭, 핵심 포인트)
-primary-600  #993C1D   다크 코럴 (호버)
-amber-500    #EF9F27   앰버 (별점, 보조 강조)
+primary-500  #10b981   에메랄드 그린 (버튼, 활성 탭, 핵심 포인트)
+primary-600  #059669   호버
 
-surface-950  #F1EFE8   페이지 배경 (크림)
-surface-900  #FAECE7   카드 배경 (웜 크림)
-surface-800  #FFFFFF   입력창 배경
-surface-700  #EDE9E0   호버 배경
-surface-600  #D4CFC7   보더
+surface-950  #0d0d0d   페이지 배경
+surface-900  #1a1a1a   카드 배경
+surface-800  #242424   입력창 배경
+surface-700  #2e2e2e   호버 배경
+surface-600  #3a3a3a   보더
 
-content-primary   #2C2C2A   본문 텍스트
-content-secondary #888780   보조 텍스트
-content-muted     #AAAAAA   흐린 텍스트
+content-primary   #ffffff
+content-secondary #a8a8a8
+content-muted     #6b6b6b
 ```
 
 **공통 클래스:** `.card` `.btn-primary` `.btn-ghost` `.input-base`
