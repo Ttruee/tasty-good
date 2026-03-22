@@ -8,18 +8,18 @@ interface RestaurantCardProps {
 const STATUS_CONFIG = {
   visited: {
     label: '가본 곳',
-    badge: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
-    border: 'border-l-orange-500',
+    badge: 'bg-teal-400/10 text-teal-400 border-teal-400/20',
+    border: 'border-l-teal-400',
   },
   want: {
     label: '가고 싶은 곳',
-    badge: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-    border: 'border-l-blue-500',
+    badge: 'bg-violet-400/10 text-violet-400 border-violet-400/20',
+    border: 'border-l-violet-400',
   },
   bad: {
     label: '별로였던 곳',
-    badge: 'bg-red-500/20 text-red-400 border-red-500/30',
-    border: 'border-l-red-500',
+    badge: 'bg-rose-400/10 text-rose-400 border-rose-400/20',
+    border: 'border-l-rose-400',
   },
 }
 
@@ -27,7 +27,7 @@ function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex items-center gap-0.5">
       {[1, 2, 3, 4, 5].map((i) => (
-        <span key={i} className={i <= rating ? 'text-amber-500' : 'text-surface-600'}>
+        <span key={i} className={i <= rating ? 'text-amber-400' : 'text-surface-600'}>
           ★
         </span>
       ))}

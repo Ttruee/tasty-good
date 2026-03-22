@@ -46,8 +46,8 @@ interface Restaurant {
 
 ## 디자인 토큰
 ```
-primary-500  #10b981   에메랄드 그린 (버튼, 활성 탭, 핵심 포인트)
-primary-600  #059669   호버
+primary-500  #F59E0B   앰버 골드 (버튼, 활성 탭, 핵심 포인트)
+primary-600  #D97706   호버
 
 surface-950  #0d0d0d   페이지 배경
 surface-900  #1a1a1a   카드 배경
@@ -63,9 +63,10 @@ content-muted     #6b6b6b
 **공통 클래스:** `.card` `.btn-primary` `.btn-ghost` `.input-base`
 
 **상태별 색상:**
-- `visited` → `border-l-orange-500`, `bg-orange-500/20 text-orange-400`
-- `want` → `border-l-blue-500`, `bg-blue-500/20 text-blue-400`
-- `bad` → `border-l-red-500`, `bg-red-500/20 text-red-400`
+- `visited` → `border-l-teal-400`, `bg-teal-400/10 text-teal-400`
+- `want` → `border-l-violet-400`, `bg-violet-400/10 text-violet-400`
+- `bad` → `border-l-rose-400`, `bg-rose-400/10 text-rose-400`
+- 별점 → `text-amber-400`
 
 ## 주요 동작
 - **RestaurantModal:** `restaurant` prop 없으면 추가, 있으면 수정 / `want`이면 별점·방문일 숨김 / 삭제 2-step confirm / 모바일 bottom sheet, 데스크탑 중앙 모달

@@ -9,9 +9,9 @@ interface RestaurantModalProps {
 }
 
 const STATUS_OPTIONS: { value: RestaurantStatus; label: string; active: string }[] = [
-  { value: 'visited', label: '✅ 가본 곳',      active: 'bg-orange-500 text-white border-orange-500' },
-  { value: 'want',    label: '🔖 가고 싶은 곳',  active: 'bg-blue-500 text-white border-blue-500' },
-  { value: 'bad',     label: '😞 별로였던 곳',   active: 'bg-red-500 text-white border-red-500' },
+  { value: 'visited', label: '✅ 가본 곳',      active: 'bg-teal-500 text-white border-teal-500' },
+  { value: 'want',    label: '🔖 가고 싶은 곳',  active: 'bg-violet-500 text-white border-violet-500' },
+  { value: 'bad',     label: '😞 별로였던 곳',   active: 'bg-rose-500 text-white border-rose-500' },
 ]
 
 function StarPicker({ value, onChange }: { value: number; onChange: (v: number) => void }) {
@@ -27,7 +27,7 @@ function StarPicker({ value, onChange }: { value: number; onChange: (v: number) 
           onMouseLeave={() => setHovered(0)}
           className="text-2xl transition-transform hover:scale-110 cursor-pointer"
         >
-          <span className={(hovered || value) >= i ? 'text-yellow-400' : 'text-surface-600'}>
+          <span className={(hovered || value) >= i ? 'text-amber-400' : 'text-surface-600'}>
             ★
           </span>
         </button>
@@ -129,7 +129,7 @@ export default function RestaurantModal({ restaurant, onClose }: RestaurantModal
           {/* 맛집 이름 */}
           <div>
             <label className="block text-sm font-medium text-content-secondary mb-1.5">
-              맛집 이름 <span className="text-orange-400">*</span>
+              맛집 이름 <span className="text-primary-500">*</span>
             </label>
             <input
               className="input-base"
@@ -159,7 +159,7 @@ export default function RestaurantModal({ restaurant, onClose }: RestaurantModal
           {/* 주소 */}
           <div>
             <label className="block text-sm font-medium text-content-secondary mb-1.5">
-              주소 <span className="text-orange-400">*</span>
+              주소 <span className="text-primary-500">*</span>
             </label>
             <input
               className="input-base"

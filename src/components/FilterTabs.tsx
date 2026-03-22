@@ -12,9 +12,9 @@ const TABS: { key: Filter; label: string }[] = [
 
 const BADGE_COLOR: Record<Filter, string> = {
   all: 'bg-surface-600 text-content-secondary',
-  visited: 'bg-orange-500/20 text-orange-400',
-  want: 'bg-blue-500/20 text-blue-400',
-  bad: 'bg-red-500/20 text-red-400',
+  visited: 'bg-teal-400/15 text-teal-400',
+  want: 'bg-violet-400/15 text-violet-400',
+  bad: 'bg-rose-400/15 text-rose-400',
 }
 
 export default function FilterTabs() {
